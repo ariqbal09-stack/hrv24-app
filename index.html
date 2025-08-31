@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Rights Voice 24</title>
+    <meta name="description" content="Press ID Card and News Management System">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#dc2626">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 400px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 16px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #dc2626;
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body data-spec-id="final-app-root">
+    <div class="container" data-spec-id="main-content">
+        <div class="logo" data-spec-id="app-logo">HRV24</div>
+        <h1 data-spec-id="app-title">Human Rights Voice 24</h1>
+        <p data-spec-id="app-description">Press ID Card and News Management System</p>
+        <div class="grid" data-spec-id="feature-grid">
+            <button class="btn" onclick="showFeature('Press ID'^)" data-spec-id="press-id-btn">🆔 Press ID</button>
+            <button class="btn" onclick="showFeature('News'^)" data-spec-id="news-btn">📰 News</button>
+            <button class="btn" onclick="showFeature('Today'^)" data-spec-id="today-btn">📱 Today</button>
+            <button class="btn" onclick="showFeature('Payment'^)" data-spec-id="payment-btn">💳 Payment</button>
+            <button class="btn" onclick="showFeature('Channel'^)" data-spec-id="channel-btn">📢 Channel</button>
+            <button class="btn" onclick="showFeature('Download'^)" data-spec-id="download-btn">⬇️ Download</button>
+        </div>
+    </div>
+    <script>
+        function showFeature(name) {
+            alert('✅ ' + name + ' activated!');
+        }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
