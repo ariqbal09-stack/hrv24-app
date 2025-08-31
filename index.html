@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRV24</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body { 
+            background: #dc2626; 
+            color: white; 
+            text-align: center; 
+            padding: 50px; 
+            font-family: Arial;
+        }
+        .logo { 
+            background: white; 
+            color: #dc2626; 
+            width: 100px; 
+            height: 100px; 
+            margin: 0 auto 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold; 
+            border-radius: 10px;
+        }
+        button { 
+            background: rgba(255,255,255,0.2); 
+            border: none; 
+            color: white; 
+            padding: 15px 30px; 
+            margin: 10px; 
+            border-radius: 5px; 
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body data-spec-id="simple-app-root">
+    <div class="logo" data-spec-id="simple-logo">HRV24</div>
+    <h1 data-spec-id="simple-title">Human Rights Voice 24</h1>
+    <p data-spec-id="simple-description">Simple Working App</p>
+    <button onclick="alert('✅ Working!'^)" data-spec-id="test-btn">Test App</button>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
